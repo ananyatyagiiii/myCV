@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ananya Tyagi | CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Global Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; background: #f4f6f8; color: #333; line-height: 1.6; }
+
+/* Hero Section */
+header {
+  background: #004aad; color: #fff; padding: 60px 20px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.hero .intro { max-width: 600px; }
+.hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 15px; }
+.hero p { font-size: 1.2em; margin-bottom: 20px; }
+
+/* Buttons */
+.hero .buttons a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: #f2994a;
+  color: #fff;
+  transition: 0.3s;
+}
+.hero .buttons a:hover {
+  background: #e07b2f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #fff;
+  color: #004aad;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.download-btn:hover {
+  background: #004aad;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+  scroll-margin-top: 120px; /* offset for smooth scrolling */
+}
+section.visible { opacity: 1; transform: translateY(0); }
+h2 {
+  color: #004aad;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+ul { list-style: none; padding-left: 0; }
+ul li { position: relative; padding-left: 20px; margin-bottom: 10px; }
+ul li::before { content: "•"; position: absolute; left: 0; color: #004aad; font-weight: bold; }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background: #004aad; color: #fff; margin-top: 50px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero img { width: 180px; height: 180px; }
+  .hero h1 { font-size: 2.2em; }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<header>
+  <div class="hero">
+    <img src="myprofile.jpg" alt="Ananya Tyagi">
+    <div class="intro">
+      <h1>Ananya Tyagi</h1>
+      <p>BSc (Hons) Physics & Maths | Aspiring Theoretical Physicist & Space Science Enthusiast</p>
+      <div class="buttons">
+        <a href="#education" class="view-section">Education</a>
+        <a href="#research" class="view-section">Research</a>
+        <a href="#internship" class="view-section">Internship</a>
+        <a href="#experience" class="view-section">Experience</a>
+        <a href="#skills" class="view-section">Skills</a>
+        <a href="#courses" class="view-section">Courses</a>
+      </div>
+     <a href="Ananya_Tyagi_CV.pdf" class="download-btn" download>Download CV</a>
+    </div>
+  </div>
+</header>
+
+<!-- Sections -->
+<section id="education">
+<h2>Education</h2>
+<p>University of Manchester – BSc (Hons) Physics & Mathematics (2024–2027)</p>
+<p>Greenwood High International School – High School Diploma (2017–2024)</p>
+</section>
+
+<section id="research">
+<h2>Research / Projects</h2>
+<p>Independent Researcher – Physics of Water Management in Chennai (2023)</p>
+<ul>
+<li>Explored physics behind urban water systems</li>
+<li>Applied theoretical concepts to real-world challenges</li>
+<li>Strengthened data analysis and scientific writing skills</li>
+</ul>
+</section>
+
+<section id="internship">
+<h2>Internship</h2>
+<p>Intern – CSR Department, Brillio (2025)</p>
+<ul>
+<li>Judged cluster and zonal rounds in South Zone and supported jury interactions</li>
+<li>Contributed to press releases, speeches, and event-day communications</li>
+<li>Coordinated with stakeholders, managed model displays, and assisted finalists</li>
+<li>Captured the event through photography, videography, and social media updates</li>
+<li>Conducted hands-on STEM training sessions for government school students</li>
+<li>Developed skills in stakeholder engagement, event coordination, content creation, and communication under pressure</li>
+</ul>
+<p><em>Learned adaptability, responsibility management, and effective collaboration. Highlighted resilience and creativity of students presenting impactful ideas.</em></p>
+</section>
+
+<section id="experience">
+<h2>Extracurriculars</h2>
+<ul>
+<li>Competitive Swimmer for 12 years</li>
+<li>Participated and won Top Ten in World Scholar’s Cup for Creative Writing and Debating in Yale University (2019)</li>
+<li>Led a “No Firecrackers” initiative in my local community, promoting environmental awareness and safety.</li>
+</ul>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<ul>
+<li>Leadership</li>
+<li>Project Management</li>
+<li>Teamwork</li>
+<li>Event Coordination</li>
+<li>Public Speaking</li>
+<li>STEM Education</li>
+<li>Content Writing & PR</li>
+<li>MATLAB & Python</li>
+<li>Data Analysis</li>
+<li>Abacus</li>
+</ul>
+</section>
+
+<section id="courses">
+<h2>Courses</h2>
+<ul>
+<li>Fundamentals of Physics I (PHYS200)</li>
+<li>Introduction to Astronomy (ASTR200)</li>
+<li>Introduction to Mathematical Thinking (THINK101x)</li>
+<li>MATLAB Onramp</li>
+<li>Mathematics for Machine Learning: Linear Algebra (MMLLA001)</li>
+</ul>
+</section>
+
+<footer>&copy; 2025 Ananya Tyagi</footer>
+
+<script>
+// Animate sections on scroll
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+});
+}, { threshold: 0.1 });
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
