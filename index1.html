@@ -6,108 +6,63 @@
 <title>Ananya Tyagi | CV</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Global Styles */
+/* ===== Global Styles ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', sans-serif; background: #f4f6f8; color: #333; line-height: 1.6; }
 
-/* Hero Section */
-header {
-  background: #004aad; color: #fff; padding: 60px 20px;
+/* ===== Hero Section ===== */
+header { background: #002366; color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; }
+header::before {
+  content: "";
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(45deg, rgba(0, 42, 102,0.3), rgba(0, 42, 102,0.1));
+  animation: bgMove 10s linear infinite;
+  z-index: 0;
 }
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.hero img {
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.hero img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-.hero .intro { max-width: 600px; }
-.hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 15px; }
+@keyframes bgMove { 0% {background-position:0 0;} 50% {background-position:200% 0;} 100% {background-position:0 0;} }
+header * { position: relative; z-index: 1; }
+.hero { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: auto; gap: 40px; flex-wrap: wrap; }
+.hero img { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s; }
+.hero img:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+.hero .intro { max-width: 600px; text-align: left; }
+.hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 10px; }
 .hero p { font-size: 1.2em; margin-bottom: 20px; }
+.hero .buttons a { display: inline-block; text-decoration: none; padding: 12px 25px; margin: 5px; border-radius: 10px; font-weight: 600; background: #f2994a; color: #fff; transition: 0.3s; }
+.hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.download-btn { display: inline-block; margin-top: 15px; background: #fff; color: #002366; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: 0.3s; }
+.download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-/* Buttons */
-.hero .buttons a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin: 5px;
-  border-radius: 10px;
-  font-weight: 600;
-  background: #f2994a;
-  color: #fff;
-  transition: 0.3s;
-}
-.hero .buttons a:hover {
-  background: #e07b2f;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-.download-btn {
-  display: inline-block;
-  margin-top: 10px;
-  background: #fff;
-  color: #004aad;
-  padding: 12px 25px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.download-btn:hover {
-  background: #004aad;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Sections */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s ease;
-  scroll-margin-top: 120px; /* offset for smooth scrolling */
-}
+/* ===== Sections ===== */
+section { max-width: 900px; margin: 40px auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); opacity: 0; transform: translateY(20px); transition: 0.6s ease, box-shadow 0.3s; scroll-margin-top: 120px; }
 section.visible { opacity: 1; transform: translateY(0); }
-h2 {
-  color: #004aad;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #004aad;
-  padding-bottom: 5px;
-  font-weight: 600;
-}
+section:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); transform: translateY(-2px); }
+h2 { color: #002366; margin-bottom: 15px; border-bottom: 2px solid #002366; padding-bottom: 5px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+h2::before { content: "📌"; }
+
+/* Lists */
 ul { list-style: none; padding-left: 0; }
 ul li { position: relative; padding-left: 20px; margin-bottom: 10px; }
-ul li::before { content: "•"; position: absolute; left: 0; color: #004aad; font-weight: bold; }
+ul li::before { content: "•"; position: absolute; left: 0; color: #002366; font-weight: bold; }
+
+/* Skill bars */
+.skill { margin-bottom: 10px; }
+.skill-name { margin-bottom: 5px; font-weight: 600; }
+.skill-bar { height: 12px; background: #e6ecf5; border-radius: 6px; overflow: hidden; }
+.skill-bar-fill { height: 100%; background: #002366; width: 0; transition: width 1s ease; }
+
+/* Counters */
+.counter { font-weight: 700; font-size: 1.5em; color: #002366; }
 
 /* Footer */
-footer { text-align: center; padding: 20px; background: #004aad; color: #fff; margin-top: 50px; }
+footer { text-align: center; padding: 20px; background: #002366; color: #fff; margin-top: 50px; font-size: 0.9em; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero { flex-direction: column; text-align: center; }
-  .hero img { width: 180px; height: 180px; }
-  .hero h1 { font-size: 2.2em; }
+.hero { flex-direction: column; text-align: center; }
+.hero img { width: 180px; height: 180px; }
+.hero .intro { text-align: center; }
+header h1 { font-size: 2.2em; }
 }
 </style>
 </head>
@@ -119,74 +74,135 @@ footer { text-align: center; padding: 20px; background: #004aad; color: #fff; ma
     <img src="myprofile.jpg" alt="Ananya Tyagi">
     <div class="intro">
       <h1>Ananya Tyagi</h1>
-      <p>BSc (Hons) Physics & Maths | Aspiring Theoretical Physicist & Space Science Enthusiast</p>
+      <p>BSc (Hons) Physics & Mathematics | Aspiring Theoretical Physicist & STEM Educator</p>
       <div class="buttons">
-        <a href="#education" class="view-section">Education</a>
-        <a href="#research" class="view-section">Research</a>
-        <a href="#internship" class="view-section">Internship</a>
-        <a href="#experience" class="view-section">Experience</a>
-        <a href="#skills" class="view-section">Skills</a>
-        <a href="#courses" class="view-section">Courses</a>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#internship">Internship</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
       </div>
-     <a href="Ananya_Tyagi_CV.pdf" class="download-btn" download>Download CV</a>
+      <a href="Ananya_Tyagi_CV.pdf" class="download-btn" download>Download CV</a>
     </div>
   </div>
 </header>
 
 <!-- Sections -->
+<section id="about">
+<h2>About Me</h2>
+        <p>BSc (Hons) Physics and Mathematics student at the University of Manchester (2024–2027) with a strong interest in theoretical physics, astrophysics, and problem-solving. I excel at analytical thinking, breaking down complex problems, and applying theoretical concepts to real-world situations.</p>
+
+        <p>I enjoy research and hands-on STEM projects, and I am comfortable working both independently and in collaborative environments. I have a keen eye for detail, a creative approach to challenges, and the ability to communicate ideas clearly, whether through writing, presentations, or mentoring.</p>
+
+        <p>Beyond academics, I am passionate about community engagement and nurturing young talent in STEM, combining leadership, curiosity, and perseverance in everything I do.</p>
+</section>
+
 <section id="education">
 <h2>Education</h2>
 <p>University of Manchester – BSc (Hons) Physics & Mathematics (2024–2027)</p>
 <p>Greenwood High International School – High School Diploma (2017–2024)</p>
+<p>Class 12 – A* in Physics, Chemistry, Mathematics</p>
+<p>Class 10 – IGCSE: A* in Mathematics; A in Physics & Chemistry</p>
 </section>
 
 <section id="research">
 <h2>Research / Projects</h2>
-<p>Independent Researcher – Physics of Water Management in Chennai (2023)</p>
 <ul>
-<li>Explored physics behind urban water systems</li>
-<li>Applied theoretical concepts to real-world challenges</li>
-<li>Strengthened data analysis and scientific writing skills</li>
+ <li><strong>Independent Researcher – Physics of Water Management, Chennai (2023)</strong>
+      <ul>
+        <li>Explored physics behind urban water systems</li>
+        <li>Applied theoretical concepts to real-world challenges</li>
+        <li>Strengthened data analysis and scientific writing skills</li>
+    </li>
+      </ul>
+<li><strong>Personal Website Development – Online CV & Portfolio (2025)</strong>
+        <ul>
+            <li>Designed and built a professional personal website from scratch using HTML, CSS, and responsive design</li>
+            <li>Showcases academic achievements, research, projects, skills, and extracurricular activities</li>
+            <li>Demonstrates initiative, web development skills, and professional presentation</li>
+        </ul>
+    </li>
+<li><strong>STEM Workshop – Government School Students (2025)</strong>
+      <ul>
+        <li>Conducted hands-on STEM and model-making sessions for students</li>
+        <li>Designed simple experiments and projects to teach physics and engineering concepts</li>
+        <li>Developed communication, teaching, and organizational skills</li>
+      </ul>
+    </li>
+    <li><strong>Math Club – Greenwood High International School (2017–2022)</strong>
+      <ul>
+        <li>Participated in problem-solving challenges and collaborative math projects</li>
+        <li>Organized peer learning sessions and workshops</li>
+        <li>Enhanced logical reasoning, teamwork, and analytical thinking</li>
 </ul>
 </section>
 
 <section id="internship">
 <h2>Internship</h2>
-<p>Intern – CSR Department, Brillio (2025)</p>
 <ul>
-<li>Judged cluster and zonal rounds in South Zone and supported jury interactions</li>
-<li>Contributed to press releases, speeches, and event-day communications</li>
-<li>Coordinated with stakeholders, managed model displays, and assisted finalists</li>
-<li>Captured the event through photography, videography, and social media updates</li>
-<li>Conducted hands-on STEM training sessions for government school students</li>
-<li>Developed skills in stakeholder engagement, event coordination, content creation, and communication under pressure</li>
+ <h3>Brillio – CSR Department Intern (2025)</h3>
+  <ul>
+    <li>Judged cluster and zonal rounds of the National STEM Challenge, supporting fair evaluation of projects</li>
+    <li>Assisted jury interactions and coordinated with finalists during the event</li>
+    <li>Prepared press releases, speeches, and managed event-day communications</li>
+    <li>Coordinated with multiple stakeholders and managed model displays</li>
+    <li>Conducted hands-on STEM training sessions for government school students on tinkering and model-making projects</li>
+    <li>Captured the spirit of events through photography, videography, and social media updates</li>
 </ul>
-<p><em>Learned adaptability, responsibility management, and effective collaboration. Highlighted resilience and creativity of students presenting impactful ideas.</em></p>
 </section>
 
 <section id="experience">
-<h2>Extracurriculars</h2>
-<ul>
-<li>Competitive Swimmer for 12 years</li>
-<li>Participated and won Top Ten in World Scholar’s Cup for Creative Writing and Debating in Yale University (2019)</li>
-<li>Led a “No Firecrackers” initiative in my local community, promoting environmental awareness and safety.</li>
+<h2>Extracurriculars / Achievements</h2>
+ <h3> Leadership Roles</h3>
+  <ul>
+     <li>Mentoring junior students in STEM or academics</li>
+     <li>Class representative roles</li>
+  </ul>
+
+  <h3> Volunteering / Social Initiatives</h3>
+  <ul>
+    <li>Led a “No Firecrackers” initiative in the community for one year, promoting environmental awareness and safety</li>
+    <li>Volunteered for multiple school events, assisting in organization, coordination, and event execution</li>
+    <li>Participated in environmental and social awareness campaigns</li>
+  </ul>
+
+  <h3> Sports & Competitions</h3>
+  <ul>
+    <li>Competitive Swimmer for 12 years</li>
+    <li>Basketball Team Member for 3 years</li>
+    <li>Participated and won Top Ten at World Scholar’s Cup at Yale University in 2019</li>
+  </ul>
+
+  <h3> Creative / Artistic Activities</h3>
+  <ul>
+    <li>Artwork selected for school gallery exhibition, showcasing creativity and visual design skills</li>
+    <li>Drama – Trinity College London, achieved Grade 4</li>
+  </ul>
+
+  <h3> Clubs & Societies</h3>
+  <ul>
+    <li>Member of the School Math Club – participating in problem-solving competitions and collaborative projects</li>
+    <li>Participated in multiple MUNs</li>
 </ul>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
-<ul>
-<li>Leadership</li>
-<li>Project Management</li>
-<li>Teamwork</li>
-<li>Event Coordination</li>
-<li>Public Speaking</li>
-<li>STEM Education</li>
-<li>Content Writing & PR</li>
-<li>MATLAB & Python</li>
-<li>Data Analysis</li>
-<li>Abacus</li>
-</ul>
+<div class="skill"><div class="skill-name">Event Coordination</div><div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div></div>
+<div class="skill"><div class="skill-name">Public Speaking</div><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
+<div class="skill"><div class="skill-name">Content Writing & PR</div><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
+<div class="skill"><div class="skill-name">MATLAB & Python</div><div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div></div>
+<div class="skill"><div class="skill-name">Data Analysis</div><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
+<div class="skill"><div class="skill-name">Abacus</div><div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div></div>
+<div class="skill"><div class="skill-name">Creativity & Visual Design</div><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
+<div class="skill"><div class="skill-name">Problem Solving & Analytical Thinking</div><div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div></div>
+<div class="skill"><div class="skill-name">Research & Experimental Design</div><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
+<div class="skill"><div class="skill-name">Leadership & Team Collaboration</div><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
+<div class="skill"><div class="skill-name">Time Management & Organization</div><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
+<div class="skill"><div class="skill-name">Scientific Reporting & Documentation</div><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
 </section>
 
 <section id="courses">
@@ -200,6 +216,17 @@ footer { text-align: center; padding: 20px; background: #004aad; color: #fff; ma
 </ul>
 </section>
 
+<section id="contact">
+<h2>Contact</h2>
+<ul>
+<li>Email: <a href="mailto:ananyatyagifall2024@gmail.com">ananyatyagifall2024@gmail.com</a></li>
+    <li>Phone (UK): <a href="tel:+447887176060">+44 07887 176060</a></li>
+    <li>Phone (India): <a href="tel:+919902596926">+91 99025 96926</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/ananyatyagiii/" target="_blank">linkedin.com/in/ananyatyagiii/</a></li>
+  </ul>
+</section>
+
+
 <footer>&copy; 2025 Ananya Tyagi</footer>
 
 <script>
@@ -211,6 +238,34 @@ if(entry.isIntersecting){ entry.target.classList.add('visible'); }
 });
 }, { threshold: 0.1 });
 sections.forEach(section => observer.observe(section));
+
+// Animate skill bars when visible
+const skills = document.querySelectorAll('.skill-bar-fill');
+const skillObserver = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){ 
+entry.target.style.width = entry.target.dataset.width; 
+}
+});
+}, { threshold: 0.5 });
+skills.forEach(skill => skillObserver.observe(skill));
+
+// Animate counters
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.dataset.target;
+    const count = +counter.innerText;
+    const increment = target / 100;
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
 </script>
 
 </body>
