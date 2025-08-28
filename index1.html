@@ -227,32 +227,41 @@ header h1 { font-size: 2.2em; }
     100% { opacity: 1; transform: scale(1); }
   }
 }
-/* Mobile-specific styles */
+/* Mobile-specific styles for professional look */
 @media (max-width: 768px) {
-  /* Change hero background */
+  /* Hero background gradient */
   header {
-    background: linear-gradient(135deg, #0055aa, #00aaff); /* fun mobile gradient */
+    background: linear-gradient(135deg, #001f4d, #003366); /* rich navy gradient */
   }
 
   /* Headline color */
   .hero h1 {
-    color: #fff5cc; /* lighter, more vibrant for mobile */
+    color: #ffffff; /* crisp white */
   }
 
-  /* Paragraph under name */
+  /* Subtitle / tagline under name */
   .hero p {
-    color: #ffeeaa;
+    color: #cfd6e0; /* soft grayish-white for readability */
   }
 
   /* Navigation buttons */
   .hero .buttons a {
-    background: #ff7f50;
-    color: #fff;
+    background: #004080; /* slightly lighter blue than header */
+    color: #ffffff;
+  }
+
+  .hero .buttons a:hover {
+    background: #0059b3; /* subtle hover accent */
   }
 
   /* Download CV button */
   .download-btn {
-    background: #ffe066;
+    background: #ffffff;
+    color: #002366; /* dark navy text for contrast */
+  }
+
+  .download-btn:hover {
+    background: #e6e6e6; /* soft hover effect */
     color: #002366;
   }
 }
