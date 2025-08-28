@@ -4,24 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ananya Tyagi | CV</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <style>
 /* ===== Global Styles ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; background: #f4f6f8; color: #333; line-height: 1.6; }
+body { font-family: 'Roboto', sans-serif; background: #f4f6f8; color: #333; line-height: 1.6; transition: background 0.3s, color 0.3s; }
+h1,h2,h3 { font-family: 'Poppins', sans-serif; }
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background: linear-gradient(to right, #0f0f1f, #1a1a2f, #0f0f1f);
+}
+
+body.dark-mode section {
+  background: #2a2a3f;
+  color: #f0f0f0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode h2 {
+  color: #f5f5f5;        /* lighter headings for visibility */
+  border-color: #f5f5f5; /* border of section heading */
+}
+
+body.dark-mode .skill-bar {
+  background: #444;        /* darker background for skill bars */
+}
+
+body.dark-mode .skill-bar-fill {
+  background: #90caf9;    /* bright color for skill fill in dark mode */
+}
+
+body.dark-mode footer {
+  background-color: #0f0f1f;
+  color: #f0f0f0;
+}
+/* Dark Mode - Contact Form */
+body.dark-mode #contact {
+  background: #3a3a55;       /* slightly lighter than sections for contrast */
+  color: #f0f0f0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  padding: 40px 25px;
+  border-radius: 12px;
+}
+
+body.dark-mode #contact h2 {
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+  background: #2a2a45;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode #contact input::placeholder,
+body.dark-mode #contact textarea::placeholder {
+  color: #cccccc;
+}
+
+body.dark-mode #contact button {
+  background: #90caf9;
+  color: #1a1a2f;
+  border: none;
+  transition: 0.3s;
+}
+
+body.dark-mode #contact button:hover {
+  background: #64b5f6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 
 /* ===== Hero Section ===== */
-header { background: #002366; color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; }
+header { background: #002366; color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; z-index:1; }
 header::before {
   content: "";
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(45deg, rgba(0, 42, 102,0.3), rgba(0, 42, 102,0.1));
+  background: linear-gradient(45deg, rgba(0,42,102,0.3), rgba(0,42,102,0.1));
   animation: bgMove 10s linear infinite;
-  z-index: 0;
+  z-index:0;
 }
+@keyframes bgMove { 0% {background-position:0 0;} 50% {background-position:200% 0;} 100% {background-position:0 0;} } header * { position: relative; z-index: 1; } .hero { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: auto; gap: 40px; flex-wrap: wrap; } .hero img { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s; } .hero img:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); } .hero .intro { max-width: 600px; text-align: left; } .hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 10px; } .hero p { font-size: 1.2em; margin-bottom: 20px; } .hero .buttons a { display: inline-block; text-decoration: none; padding: 12px 25px; margin: 5px; border-radius: 10px; font-weight: 600; background: #f2994a; color: #fff; transition: 0.3s; } .hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); } .download-btn { display: inline-block; margin-top: 15px; background: #fff; color: #002366; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: 0.3s; } .download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 @keyframes bgMove { 0% {background-position:0 0;} 50% {background-position:200% 0;} 100% {background-position:0 0;} }
-header * { position: relative; z-index: 1; }
+
 .hero { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: auto; gap: 40px; flex-wrap: wrap; }
 .hero img { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s; }
 .hero img:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
@@ -32,6 +108,9 @@ header * { position: relative; z-index: 1; }
 .hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 .download-btn { display: inline-block; margin-top: 15px; background: #fff; color: #002366; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: 0.3s; }
 .download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* Dark mode toggle button */
+#dark-mode-toggle { position: absolute; top: 60px; right: 60px; padding: 8px 12px; background: #fff; color: #002366; border: none; border-radius: 6px; cursor: pointer; z-index: 2; }
 
 /* ===== Sections ===== */
 section { max-width: 900px; margin: 40px auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); opacity: 0; transform: translateY(20px); transition: 0.6s ease, box-shadow 0.3s; scroll-margin-top: 120px; }
@@ -47,7 +126,7 @@ ul li::before { content: "•"; position: absolute; left: 0; color: #002366; fon
 
 /* Skill bars */
 .skill { margin-bottom: 10px; }
-.skill-name { margin-bottom: 5px; font-weight: 600; }
+.skill-name { margin-bottom: 5px; font-weight: 600; cursor: help; }
 .skill-bar { height: 12px; background: #e6ecf5; border-radius: 6px; overflow: hidden; }
 .skill-bar-fill { height: 100%; background: #002366; width: 0; transition: width 1s ease; }
 
@@ -56,6 +135,9 @@ ul li::before { content: "•"; position: absolute; left: 0; color: #002366; fon
 
 /* Footer */
 footer { text-align: center; padding: 20px; background: #002366; color: #fff; margin-top: 50px; font-size: 0.9em; }
+
+/* Back to Top button */
+#back-to-top { position: fixed; bottom: 40px; right: 40px; padding: 20px 22px; background: #002366; color: #fff; border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -68,13 +150,25 @@ header h1 { font-size: 2.2em; }
 </head>
 <body>
 
+<!-- Dark Mode Toggle -->
+<button id="dark-mode-toggle">Dark/Light Mode</button>
+
 <!-- Hero Section -->
 <header>
   <div class="hero">
     <img src="myprofile.jpg" alt="Ananya Tyagi">
     <div class="intro">
-      <h1>Ananya Tyagi</h1>
-      <p>BSc (Hons) Physics & Mathematics | Aspiring Theoretical Physicist & STEM Educator</p>
+<h1 style="font-weight: 700; font-size: 3em; line-height: 1.2; white-space: nowrap;">
+  Ananya Tyagi 
+  <span style="font-size: 0.35em; font-weight: 400; vertical-align: middle;">
+    (BSc (Hons) Physics & Mathematics)
+  </span>
+</h1>
+<p style="font-size: 1.2em; font-weight: 400; margin-top: 5px;">
+  Exploring the Universe & Quantum Frontiers
+</p>
+
+
       <div class="buttons">
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
@@ -90,25 +184,25 @@ header h1 { font-size: 2.2em; }
   </div>
 </header>
 
-<!-- Sections -->
-<section id="about">
+<!-- Sections (Add your content as before) -->
+<section id="about" data-aos="fade-up">
 <h2>About Me</h2>
-        <p>BSc (Hons) Physics and Mathematics student at the University of Manchester (2024–2027) with a strong interest in theoretical physics, astrophysics, and problem-solving. I excel at analytical thinking, breaking down complex problems, and applying theoretical concepts to real-world situations.</p>
+   <p>BSc (Hons) Physics and Mathematics student at the <strong>University of Manchester (2024–2027)</strong> with a strong interest in theoretical physics, astrophysics, and problem-solving. I excel at analytical thinking, breaking down complex problems, and applying theoretical concepts to real-world situations.</p>
 
         <p>I enjoy research and hands-on STEM projects, and I am comfortable working both independently and in collaborative environments. I have a keen eye for detail, a creative approach to challenges, and the ability to communicate ideas clearly, whether through writing, presentations, or mentoring.</p>
 
         <p>Beyond academics, I am passionate about community engagement and nurturing young talent in STEM, combining leadership, curiosity, and perseverance in everything I do.</p>
 </section>
 
-<section id="education">
+<section id="education" data-aos="fade-up">
 <h2>Education</h2>
-<p>University of Manchester – BSc (Hons) Physics & Mathematics (2024–2027)</p>
-<p>Greenwood High International School – High School Diploma (2017–2024)</p>
+<p><strong>University of Manchester</strong> – BSc (Hons) Physics & Mathematics (2024–2027)</p>
+<p><strong>Greenwood High International School</strong> – High School Diploma (2017–2024)</p>
 <p>Class 12 – A* in Physics, Chemistry, Mathematics</p>
 <p>Class 10 – IGCSE: A* in Mathematics; A in Physics & Chemistry</p>
 </section>
 
-<section id="research">
+<section id="research" data-aos="fade-up">
 <h2>Research / Projects</h2>
 <ul>
  <li><strong>Independent Researcher – Physics of Water Management, Chennai (2023)</strong>
@@ -140,7 +234,7 @@ header h1 { font-size: 2.2em; }
 </ul>
 </section>
 
-<section id="internship">
+<section id="internship" data-aos="fade-up">
 <h2>Internship</h2>
 <ul>
  <h3>Brillio – CSR Department Intern (2025)</h3>
@@ -154,7 +248,7 @@ header h1 { font-size: 2.2em; }
 </ul>
 </section>
 
-<section id="experience">
+<section id="experience" data-aos="fade-up">
 <h2>Extracurriculars / Achievements</h2>
  <h3> Leadership Roles</h3>
   <ul>
@@ -189,7 +283,7 @@ header h1 { font-size: 2.2em; }
 </ul>
 </section>
 
-<section id="skills">
+<section id="skills" data-aos="fade-up">
 <h2>Skills</h2>
 <div class="skill"><div class="skill-name">Event Coordination</div><div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div></div>
 <div class="skill"><div class="skill-name">Public Speaking</div><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
@@ -205,7 +299,7 @@ header h1 { font-size: 2.2em; }
 <div class="skill"><div class="skill-name">Scientific Reporting & Documentation</div><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
 </section>
 
-<section id="courses">
+<section id="courses" data-aos="fade-up">
 <h2>Courses</h2>
 <ul>
 <li>Fundamentals of Physics I (PHYS200)</li>
@@ -216,57 +310,83 @@ header h1 { font-size: 2.2em; }
 </ul>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<ul>
-<li>Email: <a href="mailto:ananyatyagifall2024@gmail.com">ananyatyagifall2024@gmail.com</a></li>
-    <li>Phone (UK): <a href="tel:+447887176060">+44 07887 176060</a></li>
-    <li>Phone (India): <a href="tel:+919902596926">+91 99025 96926</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/ananyatyagiii/" target="_blank">linkedin.com/in/ananyatyagiii/</a></li>
-  </ul>
+<!-- Contact Form Section -->
+<section id="contact" data-aos="fade-up" style="max-width: 700px; margin: 60px auto; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: #fff;">
+  <h2 style="font-size: 2em; color: #1e40af; margin-bottom: 30px; text-align: center;">Contact Me</h2>
+  
+  <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+    <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
+    <textarea name="message" placeholder="Your Message" required rows="6" style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;"></textarea>
+    <button type="submit" style="padding: 15px; background-color: #1e40af; color: #fff; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;">Send Message</button>
+  </form>
+
+  <div id="form-message" style="margin-top: 20px; text-align: center; font-size: 16px; color: green; display: none;"></div>
 </section>
 
+<!-- EmailJS Script -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("bVhLzfp6JDQy3NIbg"); // your public key
+  })();
+
+  const form = document.getElementById('contact-form');
+  const messageDiv = document.getElementById('form-message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    emailjs.sendForm('service_s4xsus4', 'template_xmry50q', this)
+      .then(function() {
+        messageDiv.style.display = 'block';
+        messageDiv.innerText = "✅ Thank you! Your message has been sent. We'll get back to you soon.";
+        form.reset();
+      }, function(error) {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = 'red';
+        messageDiv.innerText = "❌ Oops! Something went wrong. Please try again.";
+        console.error('EmailJS error:', error);
+      });
+  });
+
+</script>
+
+
+<!-- Back to Top -->
+<button id="back-to-top">↑</button>
 
 <footer>&copy; 2025 Ananya Tyagi</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-// Animate sections on scroll
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){ entry.target.classList.add('visible'); }
-});
-}, { threshold: 0.1 });
-sections.forEach(section => observer.observe(section));
+// Dark Mode Toggle
+const toggle = document.getElementById('dark-mode-toggle');
+toggle.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
 
-// Animate skill bars when visible
+// Animate sections on scroll
+AOS.init({ duration: 1000, once: true });
+
+// Animate skill bars
 const skills = document.querySelectorAll('.skill-bar-fill');
 const skillObserver = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){ 
-entry.target.style.width = entry.target.dataset.width; 
-}
-});
+entries.forEach(entry => { if(entry.isIntersecting){ entry.target.style.width = entry.target.dataset.width; } });
 }, { threshold: 0.5 });
 skills.forEach(skill => skillObserver.observe(skill));
 
-// Animate counters
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.dataset.target;
-    const count = +counter.innerText;
-    const increment = target / 100;
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCount();
+// Back to top button
+const backBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300) backBtn.style.display = 'block';
+  else backBtn.style.display = 'none';
 });
+backBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 </script>
 
 </body>
 </html>
+
+
+
+
+
