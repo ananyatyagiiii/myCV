@@ -87,7 +87,13 @@ body.dark-mode #contact button:hover {
 
 
 /* ===== Hero Section ===== */
-/* ===== Hero Section ===== */
+
+@media (min-width: 769px) {
+  .hero .buttons {
+    justify-content: flex-start; /* keep buttons aligned left on desktop */
+  }
+}
+
 header {
   position: relative;
   overflow: hidden;
@@ -163,6 +169,14 @@ header * { position: relative; z-index: 1; }
   font-size: 1.2em;
   margin-bottom: 20px;
 }
+/* ===== Hero Buttons ===== */
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center buttons on mobile */
+  gap: 10px; /* space between buttons */
+}
+
 
 .hero .buttons a, .download-btn {
   display: inline-block;
