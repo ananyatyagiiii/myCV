@@ -136,6 +136,25 @@ body.dark-mode #contact button:hover {
   }
 }
 
+/* Default */
+h1 { font-size: 3em; font-weight: 700; }
+.degree { font-size: 0.6em; color: #f0f0f0; vertical-align: middle; }
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+  }
+  .degree {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .subtitle {
+    font-size: 1em;
+  }
+}
 
 header {
   background: linear-gradient(135deg, #002366, #003399, #0044cc); color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; z-index:1; }
@@ -209,14 +228,10 @@ header h1 { font-size: 2.2em; }
   <div class="hero">
     <img src="myprofile.jpg" alt="Ananya Tyagi">
     <div class="intro">
-<h1 style="font-weight: 700; font-size: 3em; line-height: 1.2; white-space: nowrap;">
-  Ananya Tyagi 
-  <span style="font-size: 0.35em; font-weight: 400; vertical-align: middle;">
-    (BSc (Hons) Physics & Mathematics)
-  </span>
-</h1>
-<p style="font-size: 1.2em; font-weight: 400; margin-top: 5px;">
-  Exploring the Universe & Quantum Frontiers
+<h1>Ananya Tyagi <span class="degree">
+<span style="font-size: 0.35em; font-weight: 400; vertical-align: middle;">
+(BSc (Hons) Physics & Mathematics)</span></h1>
+<p class="subtitle">Exploring the Universe & Quantum Frontiers
 </p>
 
 
