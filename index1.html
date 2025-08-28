@@ -87,122 +87,47 @@ body.dark-mode #contact button:hover {
 
 
 /* ===== Hero Section ===== */
+/* ===== Mobile Hero Fix ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center image and intro */
+    gap: 20px;              /* smaller spacing */
+    padding: 40px 10px;     /* reduce padding on mobile */
+  }
 
-@media (min-width: 769px) {
+  .hero img {
+    width: 140px;  /* smaller profile pic */
+    height: 140px;
+  }
+
+  .hero .intro h1 {
+    font-size: 1.8em; /* smaller title */
+    text-align: center;
+  }
+
+  .hero .intro p {
+    font-size: 1em;   /* smaller subtitle */
+    text-align: center;
+  }
+
   .hero .buttons {
-    justify-content: flex-start; /* keep buttons aligned left on desktop */
+    flex-direction: column;  /* buttons stacked */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero .buttons a {
+    width: 90%;      /* fill width a bit */
+    text-align: center;
+  }
+
+  .download-btn {
+    width: 90%;
+    text-align: center;
   }
 }
 
-header {
-  position: relative;
-  overflow: hidden;
-  min-height: 80vh; /* flexible height for desktop and mobile */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  background: linear-gradient(45deg, #002366, #0033a0);
-  color: #fff;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(45deg, rgba(0,42,102,0.3), rgba(0,42,102,0.1));
-  animation: bgMove 10s linear infinite;
-  z-index: 0;
-}
-
-@keyframes bgMove {
-  0% { background-position:0 0; }
-  50% { background-position:200% 0; }
-  100% { background-position:0 0; }
-}
-
-header * { position: relative; z-index: 1; }
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.hero img {
-  width: 220px;
-  height: 220px;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-.hero .intro {
-  max-width: 600px;
-  text-align: left;
-}
-
-.hero h1 {
-  font-size: 3em;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero h1 span {
-  font-size: 0.6em; /* smaller degree next to name */
-  font-weight: 400;
-  margin-left: 8px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-/* ===== Hero Buttons ===== */
-.hero .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* center buttons on mobile */
-  gap: 10px; /* space between buttons */
-}
-
-
-.hero .buttons a, .download-btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin: 5px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.hero .buttons a { background: #f2994a; color: #fff; }
-.hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-
-.download-btn { background: #fff; color: #002366; }
-.download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-
-/* ===== Responsive for Mobile ===== */
-@media (max-width: 768px) {
-  header { min-height: 60vh; padding: 20px 15px; }
-  .hero { flex-direction: column; text-align: center; gap: 20px; }
-  .hero img { width: 150px; height: 150px; }
-  .hero .intro h1 { font-size: 2em; }
-  .hero .intro h1 span { font-size: 0.5em; }
-  .hero .intro p { font-size: 1em; }
-}
 
 header {
   background: linear-gradient(135deg, #002366, #003399, #0044cc); color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; z-index:1; }
