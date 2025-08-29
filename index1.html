@@ -563,6 +563,37 @@ header h1 { font-size: 2.2em; }
   color: white;
   cursor: pointer;
 }
+/* Photo Grid Responsive */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller items on mobile */
+    gap: 15px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;  /* maintain aspect ratio */
+  }
+
+  #photos {
+    padding: 20px 10px;  /* reduce padding for smaller screens */
+  }
+
+  #lightbox img {
+    max-width: 95%;       /* more space for smaller screens */
+    max-height: 70vh;     /* viewport height for mobile */
+  }
+
+  #lightbox-caption {
+    font-size: 0.9em;     /* smaller font for mobile */
+    margin-top: 10px;
+  }
+
+  .lightbox-nav {
+    font-size: 1.5em;     /* slightly smaller arrows */
+    padding: 8px 12px;
+  }
+}
 
 
 </style>
