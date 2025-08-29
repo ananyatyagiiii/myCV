@@ -117,7 +117,6 @@
 /* ===== Hero Section ===== */
 /* ===== Mobile Hero Fix ===== */
 @media (max-width: 768px) {
-
   .hero {
     flex-direction: column; /* stack vertically */
     align-items: center;    /* center image and intro */
@@ -149,18 +148,19 @@
     text-align: center;
   }
 
-  .hero .buttons,
-  .download-btn {
-    width: 100%;             /* Make both full width of parent */
-    display: flex;           /* Use flex for centering content */
-    flex-direction: column;  /* Stack vertically */
-    align-items: center;     /* Center horizontally */
-    gap: 10px;               /* Space between buttons */
+  .hero .buttons {
+    flex-direction: column;  /* buttons stacked */
+    gap: 10px;
+    width: 100%;
   }
 
-  .hero .buttons a,
+  .hero .buttons a {
+    width: 90%;      /* fill width a bit */
+    text-align: center;
+  }
+
   .download-btn {
-    width: 90%;              /* All buttons same width */
+    width: 90%;
     text-align: center;
   }
 }
@@ -338,7 +338,7 @@ header {
 /* Download CV Button */
 .download-btn {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 15px;
   background: #F5F5F5;
   color: #372061;
   padding: 12px 25px;
@@ -674,7 +674,6 @@ footer {
 <p class="subtitle">Exploring the Universe & Quantum Frontiers
 </p>
 
-
       <div class="buttons">
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
@@ -829,7 +828,6 @@ footer {
 <div class="more-projects hidden">
   <img src="project7.jpg" alt="Project 7" data-caption="The hardworking STEM & Brillio team who made this project possible">
   <img src="project8.jpg" alt="Project 8" data-caption="Volunteering at an Economic event">
-  <img src="project9.jpg" alt="Project 9" data-caption="Working on banner for an event">
 </div>
 </div>
   <button id="see-more-btn">See More</button>
@@ -843,7 +841,6 @@ footer {
   <button id="prev-lightbox" class="lightbox-nav">&#10094;</button>
   <button id="next-lightbox" class="lightbox-nav">&#10095;</button>
 </div>
-
 
 <!-- Contact Form Section -->
 <section id="contact" data-aos="fade-up" style="max-width: 700px; margin: 60px auto; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: #fff;">
@@ -922,17 +919,17 @@ footer {
   backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   const seeMoreBtn = document.getElementById("see-more-btn");
-const moreProjects = document.querySelector(".more-projects");
+  const moreProjects = document.querySelector(".more-projects");
 
-seeMoreBtn.addEventListener("click", () => {
-  if (moreProjects.classList.contains("hidden")) {
-    moreProjects.classList.remove("hidden");
-    seeMoreBtn.textContent = "See Less";
-  } else {
-    moreProjects.classList.add("hidden");
-    seeMoreBtn.textContent = "See More";
-  }
-});
+  seeMoreBtn.addEventListener("click", () => {
+    if (moreProjects.classList.contains("hidden")) {
+      moreProjects.classList.remove("hidden");
+      seeMoreBtn.textContent = "See Less";
+    } else {
+      moreProjects.classList.add("hidden");
+      seeMoreBtn.textContent = "See More";
+    }
+  });
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -951,8 +948,7 @@ seeMoreBtn.addEventListener("click", () => {
     "Team Discussion",
     "Chief Minister of Mumbai being felicitated for his presence",
     "The hardworking STEM & Brillio team who made this project possible",
-    "Volunteering at an economic event"
-    "Working on banner for an event"
+    "Volunteering at an economic event",
   ];
 
   let currentIndex = 0;
