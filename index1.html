@@ -115,56 +115,141 @@
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       }
 /* ===== Hero Section ===== */
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.hero .intro {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Buttons - Desktop and Mobile */
+.hero .buttons,
+.download-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero .buttons a,
+.download-btn {
+  text-align: center;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Button colors */
+.hero .buttons a {
+  background: #f2994a;
+  color: #fff;
+}
+
+.hero .buttons a:hover {
+  background: #e07b2f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.download-btn {
+  background: #fff;
+  color: #002366;
+}
+
+.download-btn:hover {
+  background: #002366;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 /* ===== Mobile Hero Fix ===== */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column; /* stack vertically */
-    align-items: center;    /* center image and intro */
-    gap: 20px;              /* smaller spacing */
-    padding: 40px 10px;     /* reduce padding on mobile */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 10px;
   }
 
   .hero img {
-    width: 140px;  /* smaller profile pic */
+    width: 140px;
     height: 140px;
   }
 
   .hero .intro {
-    text-align: center;       /* center all text */
+    text-align: center;     /* ensure intro text is centered */
     display: flex;
-    flex-direction: column;   /* stack content vertically */
-    align-items: center;      /* horizontally center content */
-    justify-content: center;  /* optional: center vertically inside intro div */
-    width: 100%;              /* ensure it fills available space */
-  }
-
-  .hero .intro h1 {
-    font-size: 1.8em; /* smaller title */
-    text-align: center;
-  }
-
-  .hero .intro p {
-    font-size: 1em;   /* smaller subtitle */
-    text-align: center;
-  }
-
-  .hero .buttons {
-    flex-direction: column;  /* buttons stacked */
-    gap: 10px;
+    flex-direction: column; /* stack content */
+    align-items: center;    /* center horizontally */
     width: 100%;
   }
 
+  .hero h1 { font-size: 1.8em; }
+  .hero p { font-size: 1em; }
+
+  /* Buttons stacked and centered */
+  .hero .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* center buttons horizontally */
+    justify-content: center; /* vertical alignment if needed */
+    width: 100%;             /* full width of parent */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
   .hero .buttons a {
-    width: 90%;      /* fill width a bit */
+    width: 90%;             /* same width for each button */
+    max-width: 300px;       /* optional, prevent overly wide buttons */
     text-align: center;
+    margin: 0 auto;         /* center within parent */
   }
 
   .download-btn {
+    display: block;
     width: 90%;
+    max-width: 300px;
     text-align: center;
+    margin: 10px auto 0 auto;
   }
 }
-
 /* Default */
 h1 { font-size: 3em; font-weight: 700; }
 .degree { font-size: 0.6em; color: #f0f0f0; vertical-align: middle; }
