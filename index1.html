@@ -14,6 +14,27 @@ body { font-family: 'Roboto', sans-serif; background: #f4f6f8; color: #333; line
 h1,h2,h3 { font-family: 'Poppins', sans-serif; }
 
 /* ===== Dark Mode ===== */
+
+
+body.dark-mode .hero .buttons a {
+  background: #5E4AB0;  /* slightly muted purple in dark mode */
+  color: #fff;
+}
+
+body.dark-mode .hero .buttons a:hover {
+  background: #A287FF; /* lighter hover */
+}
+
+body.dark-mode .download-btn {
+  background: #372061;
+  color: #F5F5F5;
+}
+
+body.dark-mode .download-btn:hover {
+  background: #7C5BE0;
+  color: #fff;
+}
+
 body.dark-mode {
   background: #1e1e2f;
   color: #f0f0f0;
@@ -46,6 +67,15 @@ body.dark-mode footer {
   background-color: #0f0f1f;
   color: #f0f0f0;
 }
+ body.dark-mode #see-more-btn {
+    background: #2a3b5d;
+    color: #ffffff;
+  }
+
+ body.dark-mode #see-more-btn:hover {
+    background: #3d4e72;
+
+  }
 /* Dark Mode - Contact Form */
 body.dark-mode #contact {
   background: #3a3a55;       /* slightly lighter than sections for contrast */
@@ -156,28 +186,59 @@ h1 { font-size: 3em; font-weight: 700; }
   }
 }
 
-header {
-  background: linear-gradient(135deg, #002366, #003399, #0044cc); color: #fff; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; z-index:1; }
-header::before {
-  content: "";
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(45deg, rgba(0,42,102,0.3), rgba(0,42,102,0.1));
-  animation: bgMove 10s linear infinite;
-  z-index:0;
+
 }
 @keyframes bgMove { 0% {background-position:0 0;} 50% {background-position:200% 0;} 100% {background-position:0 0;} } header * { position: relative; z-index: 1; } .hero { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: auto; gap: 40px; flex-wrap: wrap; } .hero img { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s; } .hero img:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); } .hero .intro { max-width: 600px; text-align: left; } .hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 10px; } .hero p { font-size: 1.2em; margin-bottom: 20px; } .hero .buttons a { display: inline-block; text-decoration: none; padding: 12px 25px; margin: 5px; border-radius: 10px; font-weight: 600; background: #f2994a; color: #fff; transition: 0.3s; } .hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); } .download-btn { display: inline-block; margin-top: 15px; background: #fff; color: #002366; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: 0.3s; } .download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 @keyframes bgMove { 0% {background-position:0 0;} 50% {background-position:200% 0;} 100% {background-position:0 0;} }
 
-.hero { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: auto; gap: 40px; flex-wrap: wrap; }
-.hero img { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s; }
-.hero img:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
-.hero .intro { max-width: 600px; text-align: left; }
-.hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 10px; }
-.hero p { font-size: 1.2em; margin-bottom: 20px; }
-.hero .buttons a { display: inline-block; text-decoration: none; padding: 12px 25px; margin: 5px; border-radius: 10px; font-weight: 600; background: #f2994a; color: #fff; transition: 0.3s; }
-.hero .buttons a:hover { background: #e07b2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-.download-btn { display: inline-block; margin-top: 15px; background: #fff; color: #002366; padding: 12px 25px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-.download-btn:hover { background: #002366; color: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+/* ===== Header / Hero ===== */
+header {
+  background: linear-gradient(135deg, #4B2E83, #372061); /* deep purple gradient */
+  color: #F5F5F5;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero .buttons a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: #7C5BE0;  /* professional purple */
+  color: #fff;
+  transition: 0.3s;
+}
+
+.hero .buttons a:hover {
+  background: #A287FF;  /* lighter purple on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Download CV Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #F5F5F5;
+  color: #372061;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #7C5BE0;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
 /* Dark mode toggle button */
 #dark-mode-toggle { position: absolute; top: 60px; right: 60px; padding: 8px 12px; background: #fff; color: #002366; border: none; border-radius: 6px; cursor: pointer; z-index: 2; }
@@ -199,6 +260,136 @@ ul li::before { content: "•"; position: absolute; left: 0; color: #002366; fon
 .skill-name { margin-bottom: 5px; font-weight: 600; cursor: help; }
 .skill-bar { height: 12px; background: #e6ecf5; border-radius: 6px; overflow: hidden; }
 .skill-bar-fill { height: 100%; background: #002366; width: 0; transition: width 1s ease; }
+
+/* Photo Section */
+#photos {
+  padding: 40px 20px; /* more padding on mobile */
+  text-align: center;
+}
+
+#photos h2 {
+  font-size: 1.6em; /* slightly smaller on mobile */
+  margin-bottom: 20px;
+  color: #002366;
+  border-bottom: 2px solid #002366; /* full underline */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+#photos h2::before {
+  margin-right: 8px; /* space between emoji and heading */
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller images for mobile */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* See More button */
+#see-more-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+/* Lightbox for mobile */
+#lightbox img {
+  max-width: 95%;
+  max-height: 70%;
+}
+
+#prev, #next {
+  font-size: 40px; /* smaller arrows on mobile */
+  padding: 8px;
+}
+
+@media (max-width: 480px) {
+  #photos h2 {
+    font-size: 1.4em;
+  }
+  .photo-grid {
+    grid-template-columns: 1fr; /* single column on very small screens */
+    gap: 10px;
+  }
+  #prev, #next {
+    font-size: 35px;
+  }
+}
+
+/* Photo Section - Consistent with other sections */
+#photos {
+  max-width: 900px;           /* same as other sections */
+  margin: 40px auto;          /* same spacing as other sections */
+  padding: 25px;              /* same padding as other sections */
+  background: #fff;           /* same background */
+  border-radius: 10px;        /* same border radius */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05); /* same shadow */
+  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+#photos h2 {
+  font-size: 1.8em;           /* similar to other sections */
+  margin-bottom: 15px;        /* consistent spacing */
+  color: #002366;             /* same theme color */
+  border-bottom: 2px solid #002366; /* match other sections */
+  padding-bottom: 5px;
+  font-weight: 600;
+  display: block;      
+}
+
+#photos h2::before {
+  content: "📌"; 
+  margin-right: 8px;          /* space between emoji and text */
+}
+
+/* Grid Layout */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;           /* space between heading and grid */
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Dark Mode Fix for Photo Gallery */
+body.dark-mode #photos {
+  background: #2a2a3f;
+  color: #f0f0f0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode #photos h2 {
+  color: #f5f5f5;
+  border-bottom-color: #f5f5f5;
+}
+
 
 /* Counters */
 .counter { font-weight: 700; font-size: 1.5em; color: #002366; }
@@ -277,6 +468,102 @@ header h1 { font-size: 2.2em; }
     100% { transform: translateX(0); opacity: 1; }
   }
 }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* hide inner container but keep grid rules */
+.more-projects {
+  display: contents;  /* <- key fix: items stay in same grid */
+}
+
+.more-projects.hidden {
+  display: none;  /* completely hide until button clicked */
+}
+
+
+/* See More Button */
+#see-more-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #002366;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+#see-more-btn:hover {
+  background: #3344aa;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 70%;
+  border-radius: 10px;
+}
+
+#lightbox-caption {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1em;
+  text-align: center;
+  max-width: 90%;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+#prev-lightbox { left: 20px; }
+#next-lightbox { right: 20px; }
+
+#close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
 
 </style>
 </head>
@@ -302,10 +589,11 @@ header h1 { font-size: 2.2em; }
         <a href="#education">Education</a>
         <a href="#research">Research</a>
         <a href="#internship">Internship</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Extracurriculars</a>
         <a href="#skills">Skills</a>
         <a href="#courses">Courses</a>
         <a href="#contact">Contact</a>
+        <a href="#photos">Photo Gallery</a>
       </div>
       <a href="Ananya_Tyagi_CV.pdf" class="download-btn" download>Download CV</a>
     </div>
@@ -438,6 +726,32 @@ header h1 { font-size: 2.2em; }
 </ul>
 </section>
 
+<section id="photos" data-aos="fade-up">
+  <h2>Photo Gallery</h2>
+<div class="photo-grid">
+  <img src="project1.jpg" alt="Project 1" data-caption="Brillio's organising team">
+  <img src="project2.jpg" alt="Project 2" data-caption="Guiding participants through the project demonstration">
+  <img src="project3.jpg" alt="Project 3" data-caption="Briefing the jury">
+  <img src="project4.jpg" alt="Project 4" data-caption="Recognized for contributions as part of the organizing committee">
+  <img src="project5.jpg" alt="Project 5" data-caption="Team discussion">
+  <img src="project6.jpg" alt="Project 6" data-caption="Chief Minister of Mumbai being felicitated for his presence">
+<div class="more-projects hidden">
+  <img src="project7.jpg" alt="Project 7" data-caption="The hardworking STEM & Brillio team who made this project possible">
+</div>
+</div>
+  <button id="see-more-btn">See More</button>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen Project">
+  <div id="lightbox-caption"></div>
+  <button id="prev-lightbox" class="lightbox-nav">&#10094;</button>
+  <button id="next-lightbox" class="lightbox-nav">&#10095;</button>
+</div>
+
+
 <!-- Contact Form Section -->
 <section id="contact" data-aos="fade-up" style="max-width: 700px; margin: 60px auto; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: #fff;">
   <h2 style="font-size: 2em; color: #1e40af; margin-bottom: 30px; text-align: center;">Contact Me</h2>
@@ -509,6 +823,80 @@ window.addEventListener('scroll', () => {
   else backBtn.style.display = 'none';
 });
 backBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+const seeMoreBtn = document.getElementById("see-more-btn");
+const moreProjects = document.querySelector(".more-projects");
+
+seeMoreBtn.addEventListener("click", () => {
+  if (moreProjects.classList.contains("hidden")) {
+    moreProjects.classList.remove("hidden");
+    seeMoreBtn.textContent = "See Less";
+  } else {
+    moreProjects.classList.add("hidden");
+    seeMoreBtn.textContent = "See More";
+  }
+});
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const closeLightbox = document.getElementById("close-lightbox");
+const prevBtn = document.getElementById("prev-lightbox");
+const nextBtn = document.getElementById("next-lightbox");
+
+// Array of all photos with captions
+const photos = Array.from(document.querySelectorAll(".photo-grid img"));
+const captions = [
+  "Brillio's organising team",
+  "Guiding participants through the project demonstration",
+  "Briefing the jury",
+  "Recognized for contributions as part of the organizing committee",
+  "Team Discussion",
+  "Chief Minister of Mumbai being felicitated for his presence",
+  "The hardworking STEM & Brillio team who made this project possible",
+];
+
+let currentIndex = 0;
+
+// Open lightbox
+photos.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    lightbox.style.display = "flex";
+    updateLightbox();
+  });
+});
+
+// Close lightbox
+closeLightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Navigation functions
+function updateLightbox() {
+  lightboxImg.src = photos[currentIndex].src;
+  lightboxCaption.textContent = captions[currentIndex];
+}
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  updateLightbox();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % photos.length;
+  updateLightbox();
+});
+
+// Optional: arrow keys navigation
+document.addEventListener("keydown", (e) => {
+  if (lightbox.style.display === "flex") {
+    if (e.key === "ArrowLeft") prevBtn.click();
+    if (e.key === "ArrowRight") nextBtn.click();
+    if (e.key === "Escape") closeLightbox.click();
+  }
+});
+
 </script>
 
 </body>
