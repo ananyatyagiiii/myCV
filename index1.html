@@ -149,19 +149,18 @@
     text-align: center;
   }
 
-  .hero .buttons {
-    flex-direction: column;  /* buttons stacked */
-    gap: 10px;
-    width: 90%;
-  }
-
-  .hero .buttons a {
-    width: 90%;      /* fill width a bit */
-    text-align: center;
-  }
-
+  .hero .buttons,
   .download-btn {
-    width: 90%;
+    width: 100%;             /* Make both full width of parent */
+    display: flex;           /* Use flex for centering content */
+    flex-direction: column;  /* Stack vertically */
+    align-items: center;     /* Center horizontally */
+    gap: 10px;               /* Space between buttons */
+  }
+
+  .hero .buttons a,
+  .download-btn {
+    width: 90%;              /* All buttons same width */
     text-align: center;
   }
 }
